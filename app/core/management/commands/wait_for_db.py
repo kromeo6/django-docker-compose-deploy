@@ -2,6 +2,7 @@
 Django command to wait for the database to be available
 """
 
+#from msilib.schema import Binary
 import time
 from psycopg2 import OperationalError as Psycopg2OpError
 

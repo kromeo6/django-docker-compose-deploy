@@ -1,7 +1,7 @@
 
 
 from pathlib import Path
-import os
+import os, logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,3 +131,32 @@ STATIC_ROOT = '/vol/web/static'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'main_formatter': {
+            'format': "{asctime} - {levelname} - {module} - {message}",
+            'style': "{",
+        }
+    },
+    
+    'handlers': {
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+            'formatter': 'main_formatter',
+        }
+    },
+    'loggers': {
+        'main': {
+            'handlers': ['file'],
+            'propagate': True,
+            'level': 'DEBUG',
+        }
+    }
+
+
+ }
