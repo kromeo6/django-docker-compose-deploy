@@ -20,10 +20,12 @@ def view1(request):
 
 @csrf_exempt
 def home(request):
+    logger.info('home page')
     return render(request, 'chatb/index.html')
 
 @csrf_exempt
 def get_bot_response(request, *args, **kwargs):
+
     if not request.session.session_key:
         request.session.create()
     print('esaaaa', request.session.session_key)
@@ -37,6 +39,7 @@ def get_bot_response(request, *args, **kwargs):
         chat.save()
     except:
         print('not saved in databases')
+        logger.info('not saved into db')
     
 
 
