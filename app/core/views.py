@@ -32,13 +32,12 @@ def get_bot_response(request, *args, **kwargs):
     dt = str(datetime.utcnow())
 
    
-    # try:
-    #     chat = Chat(session_id=ses_key, dt=dt, message=userText)
-    #     chat.save()
-    # except:
-    #     print('not saved in databases')
-    chat = Chat(session_id=ses_key, dt=dt, message=userText)
-    chat.save()
+    try:
+        chat = Chat(session_id=ses_key, dt=dt, message=userText)
+        chat.save()
+    except:
+        print('not saved in databases')
+    
 
 
     #print(Chat.objects.all())
