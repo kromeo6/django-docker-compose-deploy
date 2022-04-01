@@ -17,7 +17,8 @@ RUN apt-get install -y python-pip python-dev build-essential && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
     chown -R app:app /vol && \
-    chmod -R 755 /vol
+    chmod -R 755 /vol && \
+    chmod -R 777 /py
     
 
 
