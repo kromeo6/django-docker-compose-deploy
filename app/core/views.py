@@ -10,17 +10,17 @@ from core.models import Chat
 from datetime import datetime
 
 
-logger = logging.getLogger('main')
+#logger = logging.getLogger('main')
 pred = prediction()
 
 @csrf_exempt
 def view1(request):
-    logger.info('hello')
+    #logger.info('hello')
     return HttpResponse('Hi There')
 
 @csrf_exempt
 def home(request):
-    logger.info('home page')
+    #logger.info('home page')
     return render(request, 'chatb/index.html')
 
 @csrf_exempt
@@ -39,7 +39,7 @@ def get_bot_response(request, *args, **kwargs):
         chat.save()
     except:
         print('not saved in databases')
-        logger.info('not saved into db')
+        #logger.info('not saved into db')
     
 
 

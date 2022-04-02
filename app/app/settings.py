@@ -132,31 +132,31 @@ STATIC_ROOT = '/vol/web/static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
 
-    'formatters': {
-        'main_formatter': {
-            'format': "{asctime} - {levelname} - {module} - {message}",
-            'style': "{",
-        }
-    },
+#     'formatters': {
+#         'main_formatter': {
+#             'format': "{asctime} - {levelname} - {module} - {message}",
+#             'style': "{",
+#         }
+#     },
     
-    'handlers': {
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-            'formatter': 'main_formatter',
-        }
-    },
-    'loggers': {
-        'main': {
-            'handlers': ['file'],
-            'propagate': True,
-            'level': 'DEBUG',
-        }
-    }
+#     'handlers': {
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'debug.log',
+#             'formatter': 'main_formatter',
+#         }
+#     },
+#     'loggers': {
+#         'main': {
+#             'handlers': ['file'],
+#             'propagate': True,
+#             'level': 'DEBUG',
+#         }
+#     }
 
 
- }
+#  }
